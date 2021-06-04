@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<form name="competitorLogin" ng-submit="loginCompetitor()" ng-controller="competitorLoginCtrl" novalidate>
+    <h2 class="form-title">Registrate para participar</h2>
+    <div class="row">
+        <div class="col-md-6">
+            <label>Correo:</label>
+            <input ng-model="competitor.address" type="text" class="form-control" required/>
+        </div>
+        <div class="col-md-6">
+            <label>Contraseña:</label>
+            <input ng-model="competitor.contrasena" type="text" class="form-control" required/>
+        </div>
+    </div>
+    <input type="submit" value="submit" class="btn btn-default">
+</form>
