@@ -1,6 +1,6 @@
 /* global aplicacionMundial */
 
-var aplicacionMundial = angular.module('aplicacionMundial', []);
+var aplicacionMundial = angular.module('frontEnd-PlatVaCov', []);
 
 aplicacionMundial.directive('toolbar', function () {
     return{
@@ -19,6 +19,7 @@ aplicacionMundial.directive('toolbar', function () {
     };
 });
 
+
 aplicacionMundial.directive('personaInfo', function () {
     return{
         restrict: 'E',
@@ -26,6 +27,8 @@ aplicacionMundial.directive('personaInfo', function () {
         controller: 'getPersonas'
     };
 });
+
+/**
 aplicacionMundial.controller("getPersonas", function ($http, $scope) {
     $http.get('http://localhost:8080/personas/get').
             success(function (data, status, headers, config) {
@@ -35,6 +38,7 @@ aplicacionMundial.controller("getPersonas", function ($http, $scope) {
                 // log error
             });
 });
+**/
 
 aplicacionMundial.directive('personaForm', function () {
     return{
@@ -45,16 +49,17 @@ aplicacionMundial.directive('personaForm', function () {
 });
 
 aplicacionMundial.controller("personaCtrl", function ($http, $scope) {
-    $scope.addPersona = function () {
-        var url='http://localhost:8080/personas/add';
-        $http.post(url, $scope.persona).success(function (data, headers) {
-                //console.log(data);
-            $scope.persona = {};
+    $scope.addCompetitor() = function () {
+        console.log('name');
+        $http.post('http://localhost:8080/usuarios/registrarUsuario',
+                JSON.stringify($scope.usuario)).success(function (data, headers) {
+            $scope.usuario = {};
             $scope.toolbar.selectTab(2);
-      });
+        });
     };
 });
 
+/**
 aplicacionMundial.directive('competitorLogin', function () {
     return{
         restrict: 'E',
@@ -63,9 +68,10 @@ aplicacionMundial.directive('competitorLogin', function () {
     };
 });
 
+
 aplicacionMundial.controller("competitorLoginCtrl", function ($http, $scope) {
     $scope.loginCompetitor = function () {
-        var url='http://localhost:8080/competitors/log-in';
+        var url='http://localhost:8080/competitors/log-in'
         $http.post(url, $scope.competitor).success(function (data, headers) {
                 //console.log(data);
             $scope.competitor = {};
@@ -74,6 +80,7 @@ aplicacionMundial.controller("competitorLoginCtrl", function ($http, $scope) {
     };
 });
 
+
 aplicacionMundial.directive('competitorIngreso', function () {
     return{
         restrict: 'E',
@@ -81,7 +88,7 @@ aplicacionMundial.directive('competitorIngreso', function () {
         controller: 'competitorIngresoCtrl'
     };
 });
-
+**/
 
 
 

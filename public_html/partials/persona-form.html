@@ -4,55 +4,48 @@ To change this license header, choose License Headers in Project Properties.
 To change this template file, choose Tools | Templates
 and open the template in the editor.
 -->
-<form name="competitorForm" ng-submit="addCompetitor()" ng-controller="competitorCtrl" novalidate>
-    <h2 class="form-title">Registrate para participar</h2>
+<form name="personaForm" ng-submit="addPersona()" ng-controller="personaCtrl" novalidate>
+    <h2 class="form-title">Registrate En PlatVaCov!!</h2>
+    
     <div class="row">
+         <div class="col-md-6">
+            <label>ID:</label>
+            <input ng-model="usuario.idusuario" type="text" class="form-control" required/>
+        </div>
         <div class="col-md-6">
             <label>Nombre:</label>
-            <input ng-model="competitor.name" type="text" class="form-control" required/>
+            <input ng-model="usuario.nombre" type="text" class="form-control" required/>
         </div>
         <div class="col-md-6">
             <label>Apellido:</label>
-            <input ng-model="competitor.surname" type="text" class="form-control" required/>
+            <input ng-model="usuario.apellido" type="text" class="form-control" required/>
         </div>
     </div>
     <div class="row">
         <div class="col-md-6">
             <label>Correo:</label>
-            <input ng-model="competitor.address" type="text" class="form-control" required/>
+            <input ng-model="usuario.correo" type="text" class="form-control" required/>
         </div>
         <div class="col-md-6">
-            <label>Edad:</label>
-            <input ng-model="competitor.age" type="number" class="form-control" required/>
+            <label>Residencia:</label>
+            <input ng-model="usuario.residencia" type="text" class="form-control" required/>
         </div>
     </div>
     <div class="row">
         <div class="col-md-6">
             <label>Telefono:</label>
-            <input ng-model="competitor.telephone" type="number" class="form-control"
+            <input ng-model="usuario.telefono" type="text" class="form-control"
                    required/>
-        </div>
-        <div class="col-md-6">
-            <label>Celular:</label>
-            <input ng-model="competitor.cellphone" type="number" class="form-control"
-                   required/>
-        </div>
-    </div>
-    <div class="row">
-        <div class="col-md-6">
-            <label>Ciudad:</label>
-            <input ng-model="competitor.city" type="text" class="form-control" required/>
         </div>
         <div class="col-md-6">
             <label>Contraseña:</label>
-            <input ng-model="competitor.contrasena" type="text" class="form-control" required/>
+            <input ng-model="usuario.contrasena" type="text" class="form-control"
+                   required/>
         </div>
     </div>
     <div class="row">
-        <div class="col-md-6">
-            <label>País:</label>
-            <input ng-model="competitor.country" type="text" class="form-control" required/>
-        </div>
+        
     </div>
+    
     <input type="submit" value="submit" class="btn btn-default">
 </form>
